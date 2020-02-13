@@ -35,7 +35,7 @@
                     {!! Form::input('number', 'valorvenda', null, ['class' => 'form-control onlynumbers', '', 'placeholder' => 'R$', 'required' ]) !!}
                   
                     {!! Form::label('grupo_id', 'Grupo:') !!}
-                    {!! Form::select('grupo_id', $grupos, 'null', ['class' => 'form-control', 'autofocus', 'placeholder' => 'Selecione', 'required' ]) !!}
+                    {!! Form::select('grupo_id', $grupos, $produto->grupo_id, ['class' => 'form-control', 'autofocus', 'placeholder' => 'Selecione', 'required' ]) !!}
                     
                     <div class="salvarproduto">
                         {!! Form::submit('Salvar', ['class' => 'btn btn-primary']) !!}

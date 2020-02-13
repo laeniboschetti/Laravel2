@@ -43,11 +43,10 @@ class ProdutosController extends Controller
     
     public function editar($id)
     {
-        //$produto = Produto::findOrFail($id);
-        //$grupo = Grupo::pluck('descricao', 'id');
-        $produtos = Produto::with('grupos')->id;
-        
-        return view('produtos.formulario', ['produto' => $produtos]);        
+        $produto = Produto::findOrFail($id);        
+        $grupos = Grupo::pluck('descricao', 'id');
+                            
+        return view('produtos.formulario', ['produto' => $produto, 'grupos' => $grupos]);        
     }
     
     public function atualizar($id, Request $request)
